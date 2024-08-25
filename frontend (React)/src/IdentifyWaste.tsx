@@ -1,6 +1,8 @@
 import React, { useState } from "react";
-import Header from "./Header";
-import Footer from "./Footer";
+// @ts-ignore
+import Header from "./Header.tsx";
+// @ts-ignore
+import Footer from "./Footer.tsx";
 import "./GlobalStyles.css";
 import "./IdentifyWaste.css";
 

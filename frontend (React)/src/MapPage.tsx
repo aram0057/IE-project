@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import mapboxgl from "mapbox-gl";
 import "./MapPage.css";
-import Header from "./Header";
-import Footer from "./Footer";
+import Header from "./Header.tsx";
+import Footer from "./Footer.tsx";
 
 mapboxgl.accessToken =
   "pk.eyJ1IjoiYWJiaXNoZWsiLCJhIjoiY2x6Y2trYzY5MGNucTJqcHFnMzVhNnhvcyJ9.ruwp1n7aBJwok0LXQyyRNQ";

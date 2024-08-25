@@ -2,10 +2,10 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 
 import App from "./App";
-import Header from "./Header";
-import IdentifyWaste from "./IdentifyWaste";
-import MapPage from "./MapPage";
-import Home from "./Home";
+import Header from "./Header.tsx";
+import IdentifyWaste from "./IdentifyWaste.tsx";
+import MapPage from "./MapPage.tsx";
+import Home from "./Home.tsx";
 
 const rootElement = document.getElementById("root");
 const root = createRoot(rootElement);
