@@ -1,0 +1,69 @@
+/* Ensure the map-page container takes the full viewport */
+.map-page {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* The map container fills the entire space */
+#map-container {
+  width: 100%;
+  height: 100%;
+  height: 500px;
+  width: 100%;
+  border: 2px solid #333;
+  border-radius: 8px;
+  margin: 20px 0;
+}
+
+/* Options container is positioned at the bottom */
+.options-container {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.8
+  ); /* Slightly transparent background */
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  margin: 20px;
+}
+.postcode-container {
+  position: absolute;
+  bottom: 20px;
+  left: 20%;
+  transform: translateX(-50%);
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.8
+  ); /* Slightly transparent background */
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  margin: 20px;
+}
+
+.options-container label,
+.options-container select {
+  margin: 0 5px;
+}
+@media (max-width: 768px) {
+  #map-container {
+    height: 400px;
+  }
+}
