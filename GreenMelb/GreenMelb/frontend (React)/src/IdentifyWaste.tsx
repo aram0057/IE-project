@@ -11,6 +11,8 @@ const IdentifyWaste: React.FC = () => {
   const [selectedImage, setSelectedImage] = useState<File | null>(null);
   const [previewUrl, setPreviewUrl] = useState<string | null>(null);
   const [processedImageUrl, setProcessedImageUrl] = useState<string | null>(null);
+  const [classificationResults, setClassificationResults] = useState<string[]>([]);
+  const [error, setError] = useState<string | null>(null);
 
   const handleImageChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
@@ -50,8 +52,11 @@ const IdentifyWaste: React.FC = () => {
         });
         console.log("Response from server:", response.data);
         setProcessedImageUrl(`http://127.0.0.1:8000${response.data.processed_file_url}`);
+        setClassificationResults(response.data.classifications || []); // Assuming the classifications are returned as an array
+        setError(null); // Clear any previous errors
       } catch (error) {
         console.error("Error uploading the file:", error);
+        setError("There was an issue uploading the file.");
       }
     }
   };
@@ -82,6 +87,7 @@ const IdentifyWaste: React.FC = () => {
           <button type="submit" className="submit-button">
             Submit
           </button>
+          {error && <div className="error-message">{error}</div>}
           <div className="content-section">
             {previewUrl && (
               <div className="preview-container">
@@ -101,6 +107,16 @@ const IdentifyWaste: React.FC = () => {
                   alt="Processed"
                   className="image-preview"
                 />
+              </div>
+            )}
+            {classificationResults.length > 0 && (
+              <div className="classification-results">
+                <h2>Classification Results:</h2>
+                <ul>
+                  {classificationResults.map((result, index) => (
+                    <li key={index}>{result}</li>
+                  ))}
+                </ul>
               </div>
             )}
           </div>
