@@ -37,14 +37,12 @@ def preprocess_and_extract_features(cropped_pil_image):
 class ImageUploadView(APIView):
     
     def post(self, request, *args, **kwargs):
-        print("something something")
         serializer = ImageUploadSerializer(data=request.data)
         if serializer.is_valid():
             uploaded_file = serializer.validated_data['uploaded_file']
             fs = FileSystemStorage()
             filename = fs.save(uploaded_file.name, uploaded_file)
             file_path = fs.path(filename)
-
 
             # Process the image
             original_image = cv2.imread(file_path)
@@ -88,7 +86,9 @@ class ImageUploadView(APIView):
                 
                 text_color = (0, 0, 0)
                 
-                cv2.rectangle(original_image, (xmin, ymin), (xmax, ymax), class_color, 5)
+                # Increase the thickness of the bounding box
+                thicker_box_thickness = 10  # Set the thickness to a higher value
+                cv2.rectangle(original_image, (xmin, ymin), (xmax, ymax), class_color, thicker_box_thickness)
                 
                 cv2.putText(original_image, label, (text_x, text_y), cv2.FONT_HERSHEY_SIMPLEX, 
                             font_scale, text_color, font_thickness, lineType=cv2.LINE_AA)
