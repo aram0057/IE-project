@@ -1,8 +1,0 @@
-Django==4.2.5                # The Django version you're using\
-tensorflow==2.14.0           # TensorFlow version\
-torch==2.0.1                 # PyTorch version\
-opencv-python-headless==4.8.0.74  # OpenCV for image processing (headless version for servers)\
-Pillow==10.0.0               # Pillow for image handling\
-numpy==1.24.3                # NumPy for numerical operations\
-matplotlib==3.7.2            # Matplotlib for image display\
-}
