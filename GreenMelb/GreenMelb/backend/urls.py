@@ -23,7 +23,8 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/', include('classification.urls')),  # Include URLs from the classification app
+    path('api/', include('classification.urls')),
+    path('api/', include('maps.urls')),  # Include URLs from the classification app
 ]
 
 if settings.DEBUG:

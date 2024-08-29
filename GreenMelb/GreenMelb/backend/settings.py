@@ -45,7 +45,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'classification',
     'corsheaders',
-    'rest_framework'
+    'rest_framework',
+    'maps'
 ]
 
 MIDDLEWARE = [
@@ -92,13 +93,14 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'waste_centers',
-        'USER': 'teamgreen',
-        'PASSWORD': 'teamgreen123!',
-        'HOST': 'localhost',  # Or an IP Address that your DB is hosted on
-        'PORT': '3306',
+        'NAME': 'wastecentre',  # Replace with your database name
+        'USER': 'root',  # Replace with your MySQL username
+        'PASSWORD': 'Chitransh@25',  # Replace with your MySQL password
+        'HOST': '127.0.0.1',  # Since it's running locally
+        'PORT': '3306',  # Default MySQL port
     }
 }
+
 
 
 # Password validation
