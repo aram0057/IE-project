@@ -6,7 +6,7 @@ const Home: React.FC = () => {
     <div>
       <Header />
       <h2>Welcome to Green Melb</h2>
-      <p>Your journey to a greener city starts here!</p>
+      <p>Your journey to waste management starts here</p>
     </div>
   );
 };
