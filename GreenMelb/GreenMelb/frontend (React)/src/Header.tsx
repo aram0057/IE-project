@@ -15,6 +15,9 @@ const Header: React.FC = () => {
             <a href="/IdentifyWaste">Identify waste </a>
           </li>
           <li>
+            <a href="/MapPage">Recycling centers </a>
+          </li>
+          <li>
             <a href="/OrganicWaste">Organic waste</a>
           </li>
           <li>

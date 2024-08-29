@@ -187,16 +187,6 @@ const IdentifyWaste: React.FC = () => {
         </form>
       </div>
 
-      {/* Information Container */}
-      <div className="information-container">
-        {presentClassifications.map(classification => (
-          <div key={classification}>
-            <h2>{classification}</h2>
-            <p>{classificationInformation[classification]}</p>
-          </div>
-        ))}
-      </div>
-      
       <Footer />
     </>
   );

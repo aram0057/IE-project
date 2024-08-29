@@ -42,21 +42,9 @@ const Centres: React.FC = () => {
 
   return (
     <div>
-      <h2>Waste Centres</h2>
-      <p>This page shows info on waste centres</p>
-      <ul>
-        {centres.length > 0 ? (
-          centres.map((centre) => (
-            <li key={centre.centre_id}>
-              <strong>{centre.name}</strong> - {centre.address} (Lat: {centre.latitude}, Lng: {centre.longitude})
-              <br />
-              Waste Type: {centre.waste.waste_type}
-            </li>
-          ))
-        ) : (
-          <li>No centres found</li>
-        )}
-      </ul>
+      <Header />
+      <h2>Organic waste </h2>
+      <p>This page shows info on organic waste </p>
     </div>
   );
 };
