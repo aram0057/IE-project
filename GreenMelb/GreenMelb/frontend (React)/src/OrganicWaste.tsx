@@ -1,22 +1,52 @@
-import React from "react";
-import Header from "./Header.tsx";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 
-const OrganicWaste: React.FC = () => {
+interface Waste {
+  waste_id: number;
+  waste_type: string;
+}
+
+interface Centre {
+  centre_id: number;
+  name: string;
+  address: string;
+  latitude: number;
+  longitude: number;
+  waste: Waste;  // This will nest the Waste object inside the Centre
+}
+
+const Centres: React.FC = () => {
+  const [centres, setCentres] = useState<Centre[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    axios.get("http://127.0.0.1:8000/api/centres/")
+      .then((response) => {
+        setCentres(response.data);
+        setLoading(false);
+      })
+      .catch((error) => {
+        setError(error.message);
+        setLoading(false);
+      });
+  }, []);
+
+  if (loading) {
+    return <p>Loading...</p>;
+  }
+
+  if (error) {
+    return <p>Error: {error}</p>;
+  }
+
   return (
     <div>
       <Header />
       <h2>Organic waste </h2>
       <p>This page shows info on organic waste </p>
-
-      <footer className="footer">
-                <p>&copy; 2024 Green Melb. All rights reserved.</p>
-                <nav>
-                    <a href="/privacy-policy">Privacy Policy</a>
-                    <a href="/terms-of-service">Terms of Service</a>
-                </nav>
-            </footer>
     </div>
   );
 };
 
-export default OrganicWaste;
+export default Centres;
