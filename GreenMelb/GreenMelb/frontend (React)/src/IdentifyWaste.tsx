@@ -77,7 +77,6 @@ const IdentifyWaste: React.FC = () => {
     "Recyclable": "Recyclable materials can be processed and reused to create new products.",
     "Organic": "Organic waste includes food scraps and other natural materials that decompose easily.",
     "E-Waste": "E-waste refers to discarded electronic devices, which require special handling."
-    // Add more classifications and their information here
   };
 
   // Determine which classifications are present

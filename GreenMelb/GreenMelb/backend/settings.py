@@ -93,11 +93,11 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': 'wastecentre',  # Replace with your database name
-#         'USER': 'root',  # Replace with your MySQL username
-#         'PASSWORD': 'Chitransh@25',  # Replace with your MySQL password
-#         'HOST': '127.0.0.1',  # Since it's running locally
-#         'PORT': '3306',  # Default MySQL port
+#         'NAME': 'greenmelb', 
+#         'USER': 'gitgood',  
+#         'PASSWORD': 'gitgood5120', 
+#         'HOST': 'wastemelb.cl2mgccki4df.ap-southeast-2.rds.amazonaws.com',  
+#         'PORT': '3306',  
 #     }
 # }
 
