@@ -177,7 +177,6 @@ const IdentifyWaste: React.FC = () => {
                           Organic
                         </li>
                       )}
-                      {/* Add more legend items here as needed */}
                     </ul>
                   </div>
                 </div>
@@ -186,7 +185,14 @@ const IdentifyWaste: React.FC = () => {
           </div>
         </form>
       </div>
-
+      <div className="information-container">
+        {presentClassifications.map(classification => (
+          <div key={classification}>
+            <h2>{classification}</h2>
+            <p>{classificationInformation[classification]}</p>
+          </div>
+        ))}
+      </div>  
       <Footer />
     </>
   );
