@@ -6,7 +6,7 @@ GreenMelb is a web application designed to promote sustainable waste management 
 
 ## Features
 
-- **User Registration and Authentication:** Users can create accounts and log in to access personalized features.
+- **User Registration and Authentication:** Users can create accounts and log in to a ccess personalized features.
 - **Waste Center Locator:** Users can find nearby waste centers using an interactive map powered by the Mapbox API.
 - **Educational Resources:** Users can access information on waste management practices and guidelines for proper disposal.
 - **Responsive Design: ** The application is designed to be user-friendly and accessible on various devices.
