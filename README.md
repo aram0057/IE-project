@@ -1,4 +1,4 @@
-# GreenMelb - Iteration 1.
+# GreenMelb - Iteration 1
 
 ## Overview
 
