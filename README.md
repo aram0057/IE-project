@@ -13,7 +13,7 @@ GreenMelb is a web application designed to promote sustainable waste management 
 
 - **Frontend:** HTML, CSS, JavaScript, React
 - **Backend:** Django
-- **Database:** mysql
+- **Database:** MySql
 - **Mapping:** Mapbox API
 - **Deployment:** AWS
 
